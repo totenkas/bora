@@ -32,9 +32,9 @@ event1 = Event.create!(
   description: "Queridos, nossa Jojô está completando dois anos e queremos vocês junto conosco pra comemorar! Será no sábado, 24 de agosto, às 14h aqui em casa."
   # response_deadline: Date.today + 5.days
 )
-# file1 = 'joana.JPG'
-# place1.photo.attach(io: file1, filename: "allianz.png", content_type: "image/png")
-# place1.save
+photo1 = 'joana.JPG'
+event1.photo.attach(io: photo1)
+event1.save
 
 event2 = Event.create!(
   user: user3,
