@@ -10,6 +10,10 @@
   display: inline-block; /* Ensures the grid stays on one line */
   /* Adjust the grid width to fit the number of columns */
   width: calc(277px * 6 + 30px * 5); /* (Number of columns * column width) + (Number of gaps) */
+
+  @media (max-width: 900px) {
+    width: calc(140px * 4 + 24px * 3); // 4 columns with smaller size
+  }
 }
 
 .grid-item {

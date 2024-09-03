@@ -9,7 +9,8 @@ pin "bootstrap", to: "bootstrap.min.js", preload: true
 pin "@popperjs/core", to: "popper.js", preload: true
 pin "masonry-layout" # @4.2.2
 pin "desandro-matches-selector" # @2.0.2
-pin "ev-emitter" # @1.1.1
+pin "ev-emitter" # @2.1.2
 pin "fizzy-ui-utils" # @2.0.7
 pin "get-size" # @2.0.3
 pin "outlayer" # @2.1.1
+pin "imagesloaded" # @5.0.0
