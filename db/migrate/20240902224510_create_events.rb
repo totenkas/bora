@@ -3,10 +3,8 @@ class CreateEvents < ActiveRecord::Migration[7.1]
     create_table :events do |t|
       t.references :user, null: false, foreign_key: true
       t.string :title
-      t.time :start_time
-      t.time :end_time
-      t.date :start_date
-      t.date :end_date
+      t.datetime :start
+      t.datetime :end
       t.string :location
       t.integer :spots
       t.float :cost_per_person

@@ -17,10 +17,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_02_224541) do
   create_table "events", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "title"
-    t.time "start_time"
-    t.time "end_time"
-    t.date "start_date"
-    t.date "end_date"
+    t.datetime "start"
+    t.datetime "end"
     t.string "location"
     t.integer "spots"
     t.float "cost_per_person"
