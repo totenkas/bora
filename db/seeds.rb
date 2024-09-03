@@ -1,3 +1,7 @@
+puts "Destroying all users and events..."
+User.destroy_all
+Event.destroy_all
+
 puts 'Creating user...'
 
 user1 = User.create!(email: 'tomas@gmail.com', password: '123123')
@@ -32,8 +36,8 @@ event1 = Event.create!(
   description: "Queridos, nossa Jojô está completando dois anos e queremos vocês junto conosco pra comemorar! Será no sábado, 24 de agosto, às 14h aqui em casa."
   # response_deadline: Date.today + 5.days
 )
-photo1 = 'joana.JPG'
-event1.photo.attach(io: photo1)
+photo1_path = Rails.root.join('app', 'assets', 'images', 'joana.JPG')
+event1.photo.attach(io: File.open(photo1_path), filename: "joana.JPG", content_type: "image/jpeg")
 event1.save
 
 event2 = Event.create!(
@@ -48,6 +52,9 @@ event2 = Event.create!(
   description: "Queridos familiares e amigos, estamos honrados por estarem aqui! A contagem regressiva começa e aguardamos ansiosos! Dia 14.09.2024 será o melhor dia!",
   response_deadline: Date.new(2024, 8, 14)
 )
+photo2_path = Rails.root.join('app', 'assets', 'images', 'bethaniaetoshio.JPG')
+event2.photo.attach(io: File.open(photo2_path), filename: "bethaniaetoshio.JPG", content_type: "image/jpeg")
+event2.save
 
 event3 = Event.create!(
   user: user4,
@@ -61,6 +68,9 @@ event3 = Event.create!(
   description: "amigs! vamos comemorar nosso aniversário na sexta da semana que vem! reservamos um espaço no bar casa abe, na augusta! esperamos vcs! 💛"
   # response_deadline: Date.new(2024, 8, 14)
 )
+photo3_path = Rails.root.join('app', 'assets', 'images', 'floeju.JPG')
+event3.photo.attach(io: File.open(photo3_path), filename: "floeju.JPG", content_type: "image/jpeg")
+event3.save
 
 event4 = Event.create!(
   user: user5,
@@ -74,6 +84,9 @@ event4 = Event.create!(
   description: "É proibido roletar"
   # response_deadline: Date.new(2024, 8, 14)
 )
+photo4_path = Rails.root.join('app', 'assets', 'images', 'pebolim.PNG')
+event4.photo.attach(io: File.open(photo4_path), filename: "pebolim.PNG", content_type: "image/png")
+event4.save
 
 event5 = Event.create!(
   user: user6,
@@ -87,6 +100,9 @@ event5 = Event.create!(
   description: "chegou a hora, gente :) que tal um chá da tarde com a gente no próximo domingo, dia 25 de agosto, a partir das 14h? esperamos vocês!"
   # response_deadline: Date.new(2024, 8, 14)
 )
+photo5_path = Rails.root.join('app', 'assets', 'images', 'lucyejulia.JPG')
+event5.photo.attach(io: File.open(photo5_path), filename: "lucyejulia.JPG", content_type: "image/jpeg")
+event5.save
 
 event6 = Event.create!(
   user: user7,
@@ -100,6 +116,9 @@ event6 = Event.create!(
   description: "queridos amigues, colegas, simpatizantes & fãs. a mulher que vos fala está chegando aos *30*. com muita alegria, convido vocês pra comemorar junto comigo num BARCO."
   # response_deadline: Date.new(2024, 8, 14)
 )
+photo6_path = Rails.root.join('app', 'assets', 'images', 'bibiboat.JPG')
+event6.photo.attach(io: File.open(photo6_path), filename: "bibiboat.JPG", content_type: "image/jpeg")
+event6.save
 
 event7 = Event.create!(
   user: user8,
@@ -113,6 +132,9 @@ event7 = Event.create!(
   description: "Chico Trujillo pela primeira vez em São Paulo!"
   # response_deadline: Date.new(2024, 8, 14)
 )
+photo7_path = Rails.root.join('app', 'assets', 'images', 'chicotrujillo.PNG')
+event7.photo.attach(io: File.open(photo7_path), filename: "chicotrujillo.PNG", content_type: "image/png")
+event7.save
 
 event8 = Event.create!(
   user: user9,
@@ -126,6 +148,9 @@ event8 = Event.create!(
   description: "salve amigues do meu coração 🔮 retorno de saturno começou pra nois e já chegou chegando então vamos todos nos amar numa festinha boa como a gente gosta aqui em casa!"
   # response_deadline: Date.new(2024, 8, 14)
 )
+photo8_path = Rails.root.join('app', 'assets', 'images', 'festinhaboa.JPG')
+event8.photo.attach(io: File.open(photo8_path), filename: "festinhaboa.JPG", content_type: "image/jpeg")
+event8.save
 
 event9 = Event.create!(
   user: user10,
@@ -139,6 +164,9 @@ event9 = Event.create!(
   description: "depois de 2 anos sem carnaval, este ano vai rolar a maior frente ampla aquariana do role!"
   # response_deadline: Date.new(2024, 8, 14)
 )
+photo9_path = Rails.root.join('app', 'assets', 'images', 'frenteamplaaquariana.JPG')
+event9.photo.attach(io: File.open(photo9_path), filename: "frenteamplaaquariana.JPG", content_type: "image/jpeg")
+event9.save
 
 event10 = Event.create!(
   user: user11,
@@ -152,6 +180,9 @@ event10 = Event.create!(
   description: "Casamento Giu & Mets"
   # response_deadline: Date.new(2024, 8, 14)
 )
+photo10_path = Rails.root.join('app', 'assets', 'images', 'giuemets.JPG')
+event10.photo.attach(io: File.open(photo10_path), filename: "giuemets.JPG", content_type: "image/jpeg")
+event10.save
 
 event11 = Event.create!(
   user: user12,
@@ -165,6 +196,9 @@ event11 = Event.create!(
   description: "Sex & The City Birthday Party"
   # response_deadline: Date.new(2024, 8, 14)
 )
+photo11_path = Rails.root.join('app', 'assets', 'images', 'klaus.JPG')
+event11.photo.attach(io: File.open(photo11_path), filename: "klaus.JPG", content_type: "image/jpeg")
+event11.save
 
 event12 = Event.create!(
   user: user13,
@@ -178,6 +212,9 @@ event12 = Event.create!(
   description: "Maria Paula & Rafael"
   # response_deadline: Date.new(2024, 8, 14)
 )
+photo12_path = Rails.root.join('app', 'assets', 'images', 'mprb.PNG')
+event12.photo.attach(io: File.open(photo12_path), filename: "mprb.PNG", content_type: "image/png")
+event12.save
 
 event13 = Event.create!(
   user: user8,
@@ -191,6 +228,9 @@ event13 = Event.create!(
   description: "Abertura da retrospectiva de Carmela Gross no Sesc Pompéia."
   # response_deadline: Date.new(2024, 8, 14)
 )
+photo13_path = Rails.root.join('app', 'assets', 'images', 'quasecirco.JPG')
+event13.photo.attach(io: File.open(photo13_path), filename: "quasecirco.JPG", content_type: "image/jpeg")
+event13.save
 
 event14 = Event.create!(
   user: user14,
@@ -204,6 +244,9 @@ event14 = Event.create!(
   description: "Lançamento dos três novos livros da coleção e sessão de autógrafos"
   # response_deadline: Date.new(2024, 8, 14)
 )
+photo14_path = Rails.root.join('app', 'assets', 'images', 'nitsche.JPG')
+event14.photo.attach(io: File.open(photo14_path), filename: "nitsche.JPG", content_type: "image/jpeg")
+event14.save
 
 event15 = Event.create!(
   user: user15,
@@ -217,5 +260,8 @@ event15 = Event.create!(
   description: "Hellooo queridossss! Chamando vocês para estar comigo em mais uma passagem de ano"
   # response_deadline: Date.new(2024, 8, 14)
 )
+photo15_path = Rails.root.join('app', 'assets', 'images', 'niverlia.JPG')
+event15.photo.attach(io: File.open(photo15_path), filename: "niverlia.JPG", content_type: "image/jpeg")
+event15.save
 
 puts 'Events created!'
