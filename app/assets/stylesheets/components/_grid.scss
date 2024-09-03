@@ -10,6 +10,10 @@
   display: inline-block; /* Ensures the grid stays on one line */
   /* Adjust the grid width to fit the number of columns */
   width: calc(277px * 6 + 30px * 5); /* (Number of columns * column width) + (Number of gaps) */
+
+  @media (max-width: 900px) {
+    width: calc(140px * 4 + 24px * 3); // 4 columns with smaller size
+  }
 }
 
 .grid-item {
@@ -17,9 +21,8 @@
   margin-bottom: 30px; /* Adds vertical space between items */
   margin-right: 30px; /* Adds horizontal space between items */
   background-color: white;
-  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .grid-item img {
