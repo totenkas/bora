@@ -1,4 +1,6 @@
 .scrollable-container {
+  // display: flex; /* Enables flexbox layout */
+  // justify-content: center; /* Centers the grid horizontally */
   overflow-x: auto;
   white-space: nowrap; /* Ensures items are not wrapped */
   width: 100%;
