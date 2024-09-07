@@ -1,7 +1,7 @@
 <div class="scrollable-container mt-3">
   <div class="grid" data-controller='masonry'>
     <% @events.each do |event| %>
-      <div class="grid-item" data-masonry-target='item'>
+      <div class="grid-item d-none" data-masonry-target='item'>
         <%= link_to event_path(event), class: 'event-link' do %>
           <%= cl_image_tag(event.photo.key, crop: :fill, data: { masonry_target: :image }) %>
         <% end %>
