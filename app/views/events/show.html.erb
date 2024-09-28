@@ -1,8 +1,9 @@
 <div class='d-flex justify-content-center'>
   <div class='event_info'>
     <h1><%= @event.title %></h1>
-    <h2><%= @event.start %></h2>
-    <p><%= @event.user.email %></p>
+    <h2><%= @event.start.strftime("%A, %B %d") %></h2>
+    <p><%= @event.start.strftime("%H:%M") %></p>
+    <p>Hosted by <%= @event.user.email %></p>
     <p><%= @event.location %></p>
     <p><%= @event.spots %></p>
     <hr>
